@@ -1,0 +1,19 @@
+{
+  "name": "js-typescript-app",
+  "version": "1.0.0",
+  "description": "Ukázková aplikace dle postupu vytvoření TypeScript JS API aplikace dostupné na: https://developers.arcgis.com/javascript/latest/guide/typescript-setup/index.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JS",
+    "API",
+    "4.x",
+    "Esri",
+    "JavaScript",
+    "ArcGIS"
+  ],
+  "author": "Zdeněk Jankovský",
+  "license": "ISC"
+}
