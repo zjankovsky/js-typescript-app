@@ -2,7 +2,7 @@
   "name": "js-typescript-app",
   "version": "1.0.0",
   "description": "Ukázková aplikace dle postupu vytvoření TypeScript JS API aplikace dostupné na: https://developers.arcgis.com/javascript/latest/guide/typescript-setup/index.html",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

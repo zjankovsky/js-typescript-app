@@ -2,7 +2,7 @@ import EsriMap from "esri/Map";
 import MapView from "esri/views/MapView";
 
 const map = new EsriMap({
-  basemap: "streets"
+  basemap: "topo"
 });
 
 const view = new MapView({
