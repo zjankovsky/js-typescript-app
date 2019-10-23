@@ -15,5 +15,8 @@
     "ArcGIS"
   ],
   "author": "Zdeněk Jankovský",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/arcgis-js-api": "^4.13.0"
+  }
 }
