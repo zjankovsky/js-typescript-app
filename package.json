@@ -4,7 +4,9 @@
   "description": "Ukázková aplikace dle postupu vytvoření TypeScript JS API aplikace dostupné na: https://developers.arcgis.com/javascript/latest/guide/typescript-setup/index.html",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "grunt setup && grunt dev",
+    "sass-dev": "grunt dev"
   },
   "keywords": [
     "JS",
@@ -16,7 +18,19 @@
   ],
   "author": "Zdeněk Jankovský",
   "license": "ISC",
+  "devDependencies": {
+    "arcgis-js-api": "^4.13.0"
+  },
   "dependencies": {
-    "@types/arcgis-js-api": "^4.13.0"
+    "@types/arcgis-js-api": "^4.13.0",
+    "browser-sync": "2.26.7",
+    "grunt": "1.0.4",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-clean": "2.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-watch": "1.1.0",
+    "grunt-sass": "3.1.0",
+    "load-grunt-tasks": "5.1.0",
+    "node-sass": "4.12.0"
   }
 }
