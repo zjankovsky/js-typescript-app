@@ -114,13 +114,6 @@ module.exports = grunt => {
             src: ["**/*.scss", "!{base,examples}/**"],
             ext: ".css",
             dest: "dist/"
-          },
-          {
-            expand: true,
-            cwd: "src/widgets",
-            src: ["**/*.scss"],
-            ext: ".css",
-            dest: "src/widgets"
           }
         ]
       }
