@@ -6,7 +6,8 @@ app/*.js.map
 .idea/
 dist/
 node_modules/
-sass/
+sass/base
+sass/examples
 .DS_Store
 *.iml
 
