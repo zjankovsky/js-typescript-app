@@ -114,6 +114,13 @@ module.exports = grunt => {
             src: ["**/*.scss", "!{base,examples}/**"],
             ext: ".css",
             dest: "dist/"
+          },
+          {
+            expand: true,
+            cwd: "src/widgets",
+            src: ["**/*.scss"],
+            ext: ".css",
+            dest: "src/widgets"
           }
         ]
       }
@@ -121,7 +128,7 @@ module.exports = grunt => {
 
     watch: {
       sass: {
-        files: ["sass/**/*.scss", "!sass/examples/**"],
+        files: ["sass/**/*.scss", "!sass/examples/**", "src/widgets/**/*.scss"],
         tasks: "build",
         options: {
           interrupt: true

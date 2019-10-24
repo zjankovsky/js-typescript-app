@@ -1,6 +1,9 @@
 node_modules/*
 app/*.js
 app/*.js.map
+src/**/*.js.map
+src/**/*.js
+src/**/*.css
 
 ## ZE Sass aplikace thema
 .idea/
