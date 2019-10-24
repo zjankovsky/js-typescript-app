@@ -9,7 +9,7 @@ module.exports = grunt => {
         server: {
           baseDir: "./"
         },
-        startPath: "preview/",
+        startPath: "./",
         watchTask: true
       },
 
@@ -133,7 +133,8 @@ module.exports = grunt => {
 
 
   grunt.registerTask("setup", ["copy:setup"]);
-  grunt.registerTask("dev", ["build", "preview", "watch:sass"]);
+  grunt.registerTask("dev", ["build", "watch:sass"]);
+  grunt.registerTask("dev-preview", ["build", "preview", "watch:sass"]);
   grunt.registerTask("build", ["clean", "sass", "copy:dist"]);
   grunt.registerTask("preview", ["browserSync"]);
 
