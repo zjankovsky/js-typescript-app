@@ -1,6 +1,7 @@
 import EsriMap from "esri/Map";
 import MapView from "esri/views/MapView";
 import Search from "esri/widgets/Search";
+import ShowCoordinates from "../src/widgets/ShowCoordinates"
 
 const map = new EsriMap({
   basemap: "topo"
@@ -21,3 +22,6 @@ view.ui.add(search, "top-right");
 view.when(function() {
   search.search("Kongresové centrum Praha, Česká republika");
 });
+
+const showCoords = new ShowCoordinates();
+view.ui.add(showCoords, "bottom-right");

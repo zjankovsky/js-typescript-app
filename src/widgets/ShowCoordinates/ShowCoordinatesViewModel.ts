@@ -5,7 +5,7 @@ import { declared, property, subclass } from "esri/core/accessorSupport/decorato
 @subclass("app.widgets.ShowCoordinates.ShowCoordinatesViewModel")
 export default class ShowCoordinatesViewModel extends declared(Accessor) {
 
-  @property() name = "Slagathor";
+  @property() name = "View Coordinates";
 
   constructor(params?: any) {
     super();
