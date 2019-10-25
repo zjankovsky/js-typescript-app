@@ -23,5 +23,7 @@ view.when(function() {
   search.search("Kongresové centrum Praha, Česká republika");
 });
 
-const showCoords = new ShowCoordinates();
+const showCoords = new ShowCoordinates({
+  mapView: view
+});
 view.ui.add(showCoords, "bottom-right");

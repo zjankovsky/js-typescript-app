@@ -7,8 +7,13 @@ import {
 import { renderable, tsx } from "esri/widgets/support/widget";
 
 import Widget from "esri/widgets/Widget";
+import MapView from "esri/views/MapView";
 
 import ShowCoordinatesViewModel from "./ShowCoordinates/ShowCoordinatesViewModel";
+
+interface ShowCoordinatesConstructorParams {
+  mapView: MapView
+}
 
 const CSS = {
   base: "esri-widget showcoordinates-base"
@@ -17,21 +22,25 @@ const CSS = {
 @subclass("app.widgets.ShowCoordinates")
 export default class ShowCoordinates extends declared(Widget) {
 
-  @aliasOf("viewModel.name")
-  @renderable()
-  name = "";
+  constructor(params: ShowCoordinatesConstructorParams) {
+    super();
+
+    this.viewModel =  new ShowCoordinatesViewModel({
+      mapView: params.mapView
+    });
+  }
 
   @property({
     type: ShowCoordinatesViewModel
   })
   @renderable()
-  viewModel: ShowCoordinatesViewModel = new ShowCoordinatesViewModel();
+  viewModel: ShowCoordinatesViewModel;
 
   render() {
     return (
       <div class={CSS.base}>
         <p>
-          Welcome {this.name}!
+          Welcome you!
         </p>
       </div>
     );
