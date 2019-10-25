@@ -12,12 +12,31 @@ interface ShowCoordinatesViewModelConstructorParams {
 export default class ShowCoordinatesViewModel extends declared(Accessor) {
 
   @property()
-  mapView:MapView = null;
+  mapView:MapView;
+
+  @property()
+  xCoord:Number;
+
+  @property()
+  yCoord:Number;
 
   constructor(params: ShowCoordinatesViewModelConstructorParams) {
     super();
 
     this.mapView = params.mapView;
+
+    this.initViewModel = this.initViewModel.bind(this);
+
+    this.initViewModel();
   }
 
+  initViewModel():void{
+    if(!this.mapView)
+      throw new Error("ShowCoordinatesViewModel: mapView is not available!");
+    
+    this.mapView.on('pointer-move', (evnt) => {
+      this.xCoord = evnt.x;
+      this.yCoord = evnt.y;
+    });
+  }
 }

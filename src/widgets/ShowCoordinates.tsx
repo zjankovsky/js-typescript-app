@@ -36,11 +36,22 @@ export default class ShowCoordinates extends declared(Widget) {
   @renderable()
   viewModel: ShowCoordinatesViewModel;
 
+  @property()
+  @renderable()
+  @aliasOf("viewModel.xCoord")
+  xCoord:Number;
+
+  @property()
+  @renderable()
+  @aliasOf("viewModel.yCoord")
+  yCoord:Number;
+
+
   render() {
     return (
       <div class={CSS.base}>
         <p>
-          Welcome you!
+          {this.xCoord} ; {this.yCoord}
         </p>
       </div>
     );
