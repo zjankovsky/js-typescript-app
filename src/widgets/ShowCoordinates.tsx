@@ -22,6 +22,8 @@ const CSS = {
 @subclass("app.widgets.ShowCoordinates")
 export default class ShowCoordinates extends declared(Widget) {
 
+  roundPrec:number = 100;
+
   constructor(params: ShowCoordinatesConstructorParams) {
     super();
 
@@ -47,10 +49,14 @@ export default class ShowCoordinates extends declared(Widget) {
   yCoord:number;
 
   render() {
+
+    const x:number = Math.round(this.xCoord * this.roundPrec) / this.roundPrec;
+    const y:number = Math.round(this.yCoord * this.roundPrec) / this.roundPrec;
+
     return (
       <div class={CSS.base}>
         <p>
-          {this.xCoord} ; {this.yCoord}
+          {x.toFixed(2)} ; {y.toFixed(2)}
         </p>
       </div>
     );
