@@ -1,5 +1,6 @@
 import Accessor from "esri/core/Accessor";
 import MapView from "esri/views/MapView";
+import Point from "esri/geometry/Point";
 
 import { declared, property, subclass } from "esri/core/accessorSupport/decorators";
 
@@ -35,8 +36,9 @@ export default class ShowCoordinatesViewModel extends declared(Accessor) {
       throw new Error("ShowCoordinatesViewModel: mapView is not available!");
     
     this.mapView.on('pointer-move', (evnt) => {
-      this.xCoord = evnt.x;
-      this.yCoord = evnt.y;
+      const point:Point = this.mapView.toMap(evnt);
+      this.xCoord = point.x;
+      this.yCoord = point.y;
     });
   }
 }
