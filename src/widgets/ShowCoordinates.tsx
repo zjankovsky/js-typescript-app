@@ -39,13 +39,12 @@ export default class ShowCoordinates extends declared(Widget) {
   @property()
   @renderable()
   @aliasOf("viewModel.xCoord")
-  xCoord:Number;
+  xCoord:number;
 
   @property()
   @renderable()
   @aliasOf("viewModel.yCoord")
-  yCoord:Number;
-
+  yCoord:number;
 
   render() {
     return (

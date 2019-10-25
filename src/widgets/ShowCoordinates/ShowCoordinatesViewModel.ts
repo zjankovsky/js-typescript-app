@@ -16,10 +16,10 @@ export default class ShowCoordinatesViewModel extends declared(Accessor) {
   mapView:MapView;
 
   @property()
-  xCoord:Number;
+  xCoord:number;
 
   @property()
-  yCoord:Number;
+  yCoord:number;
 
   constructor(params: ShowCoordinatesViewModelConstructorParams) {
     super();
