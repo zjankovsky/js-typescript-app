@@ -23,7 +23,7 @@ interface ShowCoordinatesConstructorParams {
 }
 
 const CSS = {
-  base: "esri-widget showcoordinates-base"
+  base: "esri-widget zj-show-coords"
 };
 
 @subclass("app.widgets.ShowCoordinates")
@@ -105,27 +105,48 @@ export default class ShowCoordinates extends declared(Widget) {
     return [sjtskPoint.x, sjtskPoint.y];
   }
 
-  render() {
+  renderPWm(x:number, y:number):object{
+    let pWM = null;
+    if(!!x && !!y){
+      pWM = (
+        <div key="wmCoords">
+          <h3 class="zj-show-coords__coord-name">Souřadnice Web Mercator [x, y]</h3>
+          <p class="zj-show-coords__coords">
+            {x.toFixed(2)} ; {y.toFixed(2)}
+          </p>
+        </div>
+      );
+    }
 
-    const x:number = Math.round(this.xCoord * this.roundPrec) / this.roundPrec;
-    const y:number = Math.round(this.yCoord * this.roundPrec) / this.roundPrec;
+    return pWM;
+  }
 
+  renderPSjtsk(x:number, y:number):object {
     const sjtsk:number[] = this.webMercatToSjtsk([x, y]);
     let pSjtsk = null;
     if(sjtsk) {
       pSjtsk = (
-        <p key="sjstskCoords">
-          {sjtsk[0].toFixed(2)} ; {sjtsk[1].toFixed(2)}
-        </p>
-      );
+        <div key="sjstskCoords">
+          <h3 class="zj-show-coords__coord-name">Souřadnice SJTS Křovák East North [x, y]</h3>
+          <p class="zj-show-coords__coords">
+            {sjtsk[0].toFixed(2)} ; {sjtsk[1].toFixed(2)}
+          </p>
+        </div>
+      )
     }
 
+    return pSjtsk;
+  }
+
+  render() {
+
+    const x:number = Math.round(this.xCoord * this.roundPrec) / this.roundPrec;
+    const y:number = Math.round(this.yCoord * this.roundPrec) / this.roundPrec;
+    
     return (
       <div class={CSS.base}>
-        <p key="wmCoords">
-          {x.toFixed(2)} ; {y.toFixed(2)}
-        </p>
-        {pSjtsk}
+        {this.renderPWm(x, y)}
+        {this.renderPSjtsk(x, y)}
       </div>
     );
   }
