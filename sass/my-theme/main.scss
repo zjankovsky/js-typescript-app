@@ -5,19 +5,23 @@
 @import "../base/colors/scss/variables.scss";
 // ↳ https://github.com/Esri/calcite-colors.git
 
-$Calcite_Dark_Gray_050: #242424;
+// https://www.instagram.com/p/B3ahOyOAzH4/
+$Pal2_Blue1: #27187E;
+$Pal2_Blue2: #758BFD;
+$Pal2_Blue3: #AEB8FE;
+$Pal2_Grey: #F1F2F6;
+$Pal2_Yellow: #FF8600;
 
-// $font-color: $Calcite_Gray_150;
-$font-color: rgb(255, 255, 0);
+$background-color: $Pal2_Blue2;
+$border-color: rgba($Pal2_Blue3, 0.2);
 
-$background-color: $Calcite_Dark_Gray_050;
-$interactive-font-color: $Calcite_Vibrant_Purple_150;
-$interactive-font-color--hover: $Calcite_Vibrant_Purple_150;
-$border-color: rgba($Calcite_Vibrant_Purple_150, 0.2);
+$font-color: $Pal2_Grey;
+$interactive-font-color: $Pal2_Blue1;
+$interactive-font-color--hover: $Pal2_Yellow;
 
 $heading-color: $font-color;
 
-$button-color: $Calcite_Vibrant_Purple_150;
+$button-color: $Pal2_Blue1;
 $button-color--inverse: $background-color;
 
 // Inverse
