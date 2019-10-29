@@ -1,0 +1,25 @@
+{
+    "extensions": [
+        "CoenraadS.bracket-pair-colorizer",
+        "dbaeumer.vscode-eslint",
+        "DotJoshJohnson.xml",
+        "EditorConfig.EditorConfig",
+        "file-icons.file-icons",
+        "fisheva.eva-theme",
+        "Gruntfuggly.todo-tree",
+        "magicstack.MagicPython",
+        "mhutchie.git-graph",
+        "ms-python.python",
+        "ms-vscode-remote.remote-wsl",
+        "ms-vscode.csharp",
+        "ms-vscode.powershell",
+        "msjsdiag.debugger-for-chrome",
+        "ritwickdey.LiveServer",
+        "sidneys1.gitconfig",
+        "sphvn.projector-language-support",
+        "wayou.vscode-todo-highlight",
+        "yuichinukiyama.vscode-preview-server",
+        "yzane.markdown-pdf",
+        "yzhang.markdown-all-in-one"
+    ]
+}
