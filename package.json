@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "grunt setup && grunt dev",
+    "sass-setup": "grunt setup",
     "sass-dev": "grunt dev"
   },
   "keywords": [
